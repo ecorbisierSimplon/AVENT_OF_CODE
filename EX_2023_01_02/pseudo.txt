@@ -1,0 +1,13 @@
+chercher le 1er mot
+a = faire un slice du mot (slice(0, fin du mot))
+b = faire un slice du mot (slice(fin du mot, lenght))
+récupérer le chiffre du 1er mot trouver et le remplacer dans a
+fusionner a et b
+
+recommencer pour le dernier mot
+
+
+je cherche 1er digit chiffre ou en lettre
+je cherche dernier digit chiffre ou en lettre
+fusionner a+b en Number
+

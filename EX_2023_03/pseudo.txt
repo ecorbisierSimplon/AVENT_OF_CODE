@@ -1,0 +1,40 @@
+result number[] : recupération des resultats
+
+fileContent : Récuperer le dossier avec 
+
+content : Séparer les lignes en tableau ()
+
+numPoint : compter le nombre de caractères par ligne (utiliser la 1ère ligne)
+
+créer une ligne avec des points (uiliser ".".repeat(numPoint.lenght))
+
+ajouter la ligne avant content et une après
+
+line string[] : creer le tableau pour gérer 3 lignes
+
+
+récupérer les 2 première lignes dans [1] et [2]
+
+boucle pour ajouter 1 ligne
+    deplacer line[1] dans line[0]
+    deplacer line[2] dans line[1]
+    ajouter la ligne suivante dans line[2]
+
+    appel fonction pour trater la line[1] par rapport à [0] et [2]
+
+
+Créer fonction qui récupère les 3 lignes
+    let number[] = récuperer les nombres de la line[1] et leur emplacement
+    boucle pour tester chaque nombre
+        let test = false
+        tester le caractère précédent et suivant le nombre 
+            si caractère présent : test = true ; BREAK
+        tester avec line[0] et line[2] chaque caractère en partant de n-1 à n+1 
+        par rapport à la position du nombre dans la ligne
+            si caractère présent : test = true ; BREAK
+        si test = true ; PUSH LE NOMBRE DANS result
+
+
+
+faire addition de result
+
