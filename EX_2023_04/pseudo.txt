@@ -1,0 +1,25 @@
+result number[] : recupération des resultats
+
+fileContent : Récuperer le dossier avec 
+
+content : Séparer les lignes en tableau ()
+
+
+fonction for line of content
+
+    numbersLine = line.split("|");
+    dans numbers 0 faire un numbersLine[0].split(" ");
+    dans numbers 1 faire un numbersLine[1].split(" ");
+
+    utiliser intersection = tableau1.filter(val => tableau2.includes(val)) pour retrouver les éléments identique
+
+
+    compter le nombre d'éléments dans intersection -> interTotal = intersection.lenght;
+    if interTotal =1 
+        result.push(1)
+    else if interTotal>1
+        result.push(interTotal *2)
+
+
+faire addition de result
+
