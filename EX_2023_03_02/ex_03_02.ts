@@ -1,9 +1,5 @@
 import * as fs from "fs";
-import { addArray, multiArray } from "../EX_2023_01/fonction";
-
-function isNumberBetween(value: number, lower: number, upper: number): boolean {
-  return lower <= value && value <= upper;
-}
+import { addArray, multiArray, isNumberBetween } from "../EX_2023_01/fonction";
 
 export function exo(filePath: string): number {
   const result: number[] = [];

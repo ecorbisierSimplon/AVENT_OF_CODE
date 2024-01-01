@@ -1,0 +1,56 @@
+import * as fs from "fs";
+import { string } from "yargs";
+import { nextAfter } from "../EX_2023_01/ex_01";
+
+export function exo(filePath: string): number {
+  try {
+    const fileContent: string = fs.readFileSync(filePath, { encoding: "utf8" });
+    let content: string = "";
+    const result: number[] = [];
+    const color: string[] = ["red", "green", "blue"];
+    const nombresObj: Record<string, number> = { red: 12, green: 13, blue: 14 };
+    let colorsCubes: Record<string, number> = {
+      red: 0,
+      green: 0,
+      blue: 0,
+    };
+    colorsCubes["red"] = 0;
+    colorsCubes["green"] = 0;
+    colorsCubes["blue"] = 0;
+
+    for (let line of fileContent.split("\n")) {
+      let play: string[] = [];
+      play = line.split(":");
+      // Récupération du numéro du Game:
+      play[0] = play[0].split(" ")[1].trim();
+      const party: string[] = play[1].split(";");
+
+      partyPlay(party[0]);
+      partyPlay(party[1]);
+      partyPlay(party[2]);
+    }
+
+    function partyPlay(party: string): void {
+      console.log(party);
+      const cubes: string[] = party.trim().split(",");
+      // for (let numCubes of cubes) {
+      //   const cube: string[] = numCubes.trim().split(" ");
+      //   // console.log(cube[1].trim() + " : " + cube[0].trim());
+      //   let color: string = cube[0].trim();
+      //   let num: number = Number(cube[1].trim());
+      //   colorsCubes[color] += num;
+      // }
+    }
+    console.log("colorsCubes");
+    console.log(colorsCubes);
+    console.log("Content : " + content);
+
+    let sum = nextAfter(content);
+
+    console.log("Sommes : " + sum);
+
+    return 4;
+  } catch (error) {
+    throw error;
+  }
+}
